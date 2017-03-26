@@ -14,4 +14,3 @@ sorted_length = sorted(count_list, key=len)
 print("Text: {}".format(string))
 for word in count_list:
     print("{:{}} : {}".format(word, len(sorted_length[-1]), count_dict[word]))
-
