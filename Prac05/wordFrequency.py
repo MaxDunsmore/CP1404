@@ -7,6 +7,11 @@ for word in split_string:
     else:
         count_dict[word] = 1
 
+count_list = list(count_dict)
+count_list.sort()
+sorted_length = sorted(count_list, key=len)
+
 print("Text: {}".format(string))
-for word in count_dict:
-    print("{} : {}".format(word, count_dict[word]))
+for word in count_list:
+    print("{:{}} : {}".format(word, len(sorted_length[-1]), count_dict[word]))
+
