@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+        TextInput:
+            id: input
+            size_hint_x: 4
+            text: "34"
+            font_size: 35
+            multiline: False
+            on_text: app.calculate_miles(input.text)
+        BoxLayout:
+            orientation: "vertical"
+            Button:
+                id: up_button
+                text: "Up"
+                font_size: 20
+                on_press: app.calculate_miles(input.text)
+                on_press: app.change_input(input.text, 1)
+
+            Button:
+                id: down_button
+                text: "Down"
+                font_size: 20
+                on_press: app.calculate_miles(input.text)
+                on_press: app.change_input(input.text, 0)
+
+    Label:
+        id: calculation
+        text: ""
+        color: (1, 1, 0, 1)
+        font_size: 35
+
