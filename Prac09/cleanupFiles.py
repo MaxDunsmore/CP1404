@@ -15,15 +15,3 @@ for dir_name, subdir_list, file_list in os.walk('.'):
             new_name = new_name[:extension].title() + new_name[extension:]
 
         os.rename(dir_name + os.sep + filename, dir_name + os.sep + new_name)  # no idea what os.sep is
-
-
-
-
-
-
-
-
-
-
-
-

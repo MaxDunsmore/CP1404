@@ -22,6 +22,3 @@ for i in names:
     for filename in os.listdir('.'):
         if filename.endswith(i):
             shutil.move(filename, abc)
-
-
-
